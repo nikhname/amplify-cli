@@ -18,6 +18,7 @@ export function generateSource(context: LegacyCompilerContext) {
   const generator = new CodeGenerator<LegacyCompilerContext>(context);
 
   generator.printOnNewline('/* tslint:disable */');
+  generator.printOnNewline('/* eslint-disable */');
   generator.printOnNewline('//  This file was automatically generated and should not be edited.');
 
   generator.printOnNewline(`import { Injectable } from '@angular/core';`);
@@ -74,7 +75,7 @@ function interfaceDeclarationForOperation(generator: CodeGenerator, { operationN
       },
       () => {
         propertyDeclarations(generator, properties);
-      }
+      },
     );
   }
 }
@@ -126,7 +127,7 @@ function generateSubscriptionOperation(generator: CodeGenerator, op: LegacyOpera
   generator.printNewline();
   const subscriptionName = `${operationName}Listener`;
   generator.print(
-    `${subscriptionName}: Observable<${returnType}> = API.graphql(graphqlOperation(\n\`${statement}\`)) as Observable<${returnType}>`
+    `${subscriptionName}: Observable<${returnType}> = API.graphql(graphqlOperation(\n\`${statement}\`)) as Observable<${returnType}>`,
   );
   generator.printNewline();
 }
@@ -166,7 +167,7 @@ export function variablesFromField(
     fragmentSpreads?: any;
     inlineFragments?: LegacyInlineFragment[];
     fieldName?: string;
-  }[]
+  }[],
 ) {
   return fields.map(field => propertyFromVar(context, field));
 }
@@ -182,7 +183,7 @@ export function propertyFromVar(
     fragmentSpreads?: any;
     inlineFragments?: LegacyInlineFragment[];
     fieldName?: string;
-  }
+  },
 ): Property {
   let { name: fieldName, type: fieldType } = field;
   fieldName = fieldName || field.responseName;
@@ -241,7 +242,7 @@ function variableAssignmentToInput(generator: CodeGenerator, vars: Property[]) {
           });
       },
       '{',
-      '}'
+      '}',
     );
     // null able arguments
     vars
@@ -253,7 +254,7 @@ function variableAssignmentToInput(generator: CodeGenerator, vars: Property[]) {
             generator.printOnNewline(`gqlAPIServiceArguments.${v.fieldName} = ${v.fieldName}`);
           },
           '{',
-          '}'
+          '}',
         );
       });
   }

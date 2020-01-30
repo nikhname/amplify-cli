@@ -28,6 +28,7 @@ export function generateSource(context: LegacyCompilerContext) {
   const generator = new CodeGenerator<LegacyCompilerContext>(context);
 
   generator.printOnNewline('/* tslint:disable */');
+  generator.printOnNewline('/* eslint-disable */');
   generator.printOnNewline('//  This file was automatically generated and should not be edited.');
 
   context.typesUsed.forEach(type => typeDeclarationForGraphQLType(generator, type));
@@ -87,7 +88,7 @@ function structDeclarationForInputObjectType(generator: CodeGenerator, type: Gra
     () => {
       const properties = propertiesFromFields(generator.context, Object.values(type.getFields()));
       propertyDeclarations(generator, properties, true);
-    }
+    },
   );
 }
 
@@ -109,7 +110,7 @@ export function interfaceNameFromOperation({ operationName, operationType }: { o
 
 export function interfaceVariablesDeclarationForOperation(
   generator: CodeGenerator,
-  { operationName, operationType, variables }: LegacyOperation
+  { operationName, operationType, variables }: LegacyOperation,
 ) {
   if (!variables || variables.length < 1) {
     return;
@@ -124,7 +125,7 @@ export function interfaceVariablesDeclarationForOperation(
     () => {
       const properties = propertiesFromFields(generator.context, variables);
       propertyDeclarations(generator, properties, true);
-    }
+    },
   );
 }
 
@@ -183,7 +184,7 @@ export function interfaceDeclarationForOperation(generator: CodeGenerator, { ope
     },
     () => {
       propertyDeclarations(generator, properties);
-    }
+    },
   );
 }
 
@@ -256,7 +257,7 @@ export function interfaceDeclarationForFragment(generator: CodeGenerator, fragme
         const properties = propertiesFromFields(generator.context, fragmentFields);
         propertyDeclarations(generator, properties);
       }
-    }
+    },
   );
 }
 
@@ -270,7 +271,7 @@ export function propertiesFromFields(
     fragmentSpreads?: any;
     inlineFragments?: LegacyInlineFragment[];
     fieldName?: string;
-  }[]
+  }[],
 ) {
   return fields.map(field => propertyFromField(context, field));
 }
@@ -286,7 +287,7 @@ export function propertyFromField(
     fragmentSpreads?: any;
     inlineFragments?: LegacyInlineFragment[];
     fieldName?: string;
-  }
+  },
 ): Property {
   let { name: fieldName, type: fieldType, description, fragmentSpreads, inlineFragments } = field;
   fieldName = fieldName || field.responseName;

@@ -2,6 +2,7 @@
 
 exports[`Angular code generation #generateSource() should generate correct list with custom fragment 1`] = `
 "/* tslint:disable */
+/* eslint-disable */
 //  This file was automatically generated and should not be edited.
 import { Injectable } from \\"@angular/core\\";
 import API, { graphqlOperation } from \\"@aws-amplify/api\\";
@@ -81,6 +82,7 @@ export class APIService {
 
 exports[`Angular code generation #generateSource() should generate fragmented query operations 1`] = `
 "/* tslint:disable */
+/* eslint-disable */
 //  This file was automatically generated and should not be edited.
 import { Injectable } from \\"@angular/core\\";
 import API, { graphqlOperation } from \\"@aws-amplify/api\\";
@@ -170,6 +172,7 @@ export class APIService {
 
 exports[`Angular code generation #generateSource() should generate mutation operations with complex input types 1`] = `
 "/* tslint:disable */
+/* eslint-disable */
 //  This file was automatically generated and should not be edited.
 import { Injectable } from \\"@angular/core\\";
 import API, { graphqlOperation } from \\"@aws-amplify/api\\";
@@ -270,6 +273,7 @@ export class APIService {
 
 exports[`Angular code generation #generateSource() should generate query operations with inline fragments 1`] = `
 "/* tslint:disable */
+/* eslint-disable */
 //  This file was automatically generated and should not be edited.
 import { Injectable } from \\"@angular/core\\";
 import API, { graphqlOperation } from \\"@aws-amplify/api\\";
@@ -315,6 +319,7 @@ export class APIService {
 
 exports[`Angular code generation #generateSource() should generate simple nested query operations including input variables 1`] = `
 "/* tslint:disable */
+/* eslint-disable */
 //  This file was automatically generated and should not be edited.
 import { Injectable } from \\"@angular/core\\";
 import API, { graphqlOperation } from \\"@aws-amplify/api\\";
@@ -382,6 +387,7 @@ export class APIService {
 
 exports[`Angular code generation #generateSource() should generate simple nested with required elements in lists 1`] = `
 "/* tslint:disable */
+/* eslint-disable */
 //  This file was automatically generated and should not be edited.
 import { Injectable } from \\"@angular/core\\";
 import API, { graphqlOperation } from \\"@aws-amplify/api\\";
@@ -413,6 +419,7 @@ export class APIService {
 
 exports[`Angular code generation #generateSource() should generate simple query operations 1`] = `
 "/* tslint:disable */
+/* eslint-disable */
 //  This file was automatically generated and should not be edited.
 import { Injectable } from \\"@angular/core\\";
 import API, { graphqlOperation } from \\"@aws-amplify/api\\";
@@ -445,6 +452,7 @@ export class APIService {
 
 exports[`Angular code generation #generateSource() should generate simple query operations including input variables 1`] = `
 "/* tslint:disable */
+/* eslint-disable */
 //  This file was automatically generated and should not be edited.
 import { Injectable } from \\"@angular/core\\";
 import API, { graphqlOperation } from \\"@aws-amplify/api\\";
@@ -490,6 +498,7 @@ export class APIService {
 
 exports[`Angular code generation #generateSource() should handle comments in enums 1`] = `
 "/* tslint:disable */
+/* eslint-disable */
 //  This file was automatically generated and should not be edited.
 import { Injectable } from \\"@angular/core\\";
 import API, { graphqlOperation } from \\"@aws-amplify/api\\";
@@ -528,6 +537,7 @@ export class APIService {
 
 exports[`Angular code generation #generateSource() should handle interfaces at root 1`] = `
 "/* tslint:disable */
+/* eslint-disable */
 //  This file was automatically generated and should not be edited.
 import { Injectable } from \\"@angular/core\\";
 import API, { graphqlOperation } from \\"@aws-amplify/api\\";
@@ -565,6 +575,7 @@ export class APIService {
 
 exports[`Angular code generation #generateSource() should handle multi-line comments 1`] = `
 "/* tslint:disable */
+/* eslint-disable */
 //  This file was automatically generated and should not be edited.
 import { Injectable } from \\"@angular/core\\";
 import API, { graphqlOperation } from \\"@aws-amplify/api\\";
@@ -598,6 +609,7 @@ export class APIService {
 
 exports[`Angular code generation #generateSource() should handle single line comments 1`] = `
 "/* tslint:disable */
+/* eslint-disable */
 //  This file was automatically generated and should not be edited.
 import { Injectable } from \\"@angular/core\\";
 import API, { graphqlOperation } from \\"@aws-amplify/api\\";
@@ -630,6 +642,7 @@ export class APIService {
 
 exports[`Angular code generation #generateSource() should handle unions at root 1`] = `
 "/* tslint:disable */
+/* eslint-disable */
 //  This file was automatically generated and should not be edited.
 import { Injectable } from \\"@angular/core\\";
 import API, { graphqlOperation } from \\"@aws-amplify/api\\";
@@ -665,6 +678,7 @@ export class APIService {
 
 exports[`Angular code generation #generateSource() should have __typename value matching fragment type on generic type 1`] = `
 "/* tslint:disable */
+/* eslint-disable */
 //  This file was automatically generated and should not be edited.
 import { Injectable } from \\"@angular/core\\";
 import API, { graphqlOperation } from \\"@aws-amplify/api\\";
@@ -709,6 +723,7 @@ export class APIService {
 
 exports[`Angular code generation #generateSource() should have __typename value matching fragment type on specific type 1`] = `
 "/* tslint:disable */
+/* eslint-disable */
 //  This file was automatically generated and should not be edited.
 import { Injectable } from \\"@angular/core\\";
 import API, { graphqlOperation } from \\"@aws-amplify/api\\";
