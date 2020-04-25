@@ -22,7 +22,6 @@
     "setup-profile": "ts-node ./src/configure_tests.ts"
   },
   "dependencies": {
-    "@types/jest": "^25.2.1",
     "@types/node": "^13.13.0",
     "amplify-e2e-core": "1.1.1",
     "aws-sdk": "^2.608.0",
