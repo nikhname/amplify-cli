@@ -8,29 +8,22 @@ export async function executePrompt(promptQuestion: InputPrompt | SelectPrompt) 
   return answer[promptQuestion.name];
 }
 
-export class InputPrompt {
+interface CliPrompt {
   name: string;
-  type: string;
-  message: string;
-  initial?: string;
+  promptMessage: string;
+  initialValue?: string;
+}
+
+export class InputPrompt implements CliPrompt {
+  type = 'input';
   validate?: (input: string) => string | true;
-  constructor(promptName: string, promptMessage: string, initialInput: string, validator: validatorFunction, invalidMessage: string) {
-    this.type = 'input';
-    (this.name = promptName),
-      (this.message = promptMessage),
-      (this.initial = initialInput),
+  constructor(public name: string, public promptMessage: string, public initialValue: string, validator: validatorFunction, invalidMessage: string) {
       (this.validate = input => validator(input) || invalidMessage);
   }
 }
 
-export class SelectPrompt {
-  name: string;
-  type: string;
-  message: string;
-  choices: string[];
-  initial?: string;
-  constructor(promptName: string, promptMessage: string, choicesSelect: string[], initialSelect?: string) {
-    this.type = 'select';
-    (this.name = promptName), (this.message = promptMessage), (this.choices = choicesSelect), (this.initial = initialSelect);
+export class SelectPrompt implements CliPrompt {
+  type = 'select';
+  constructor(public name: string, public promptMessage: string, public choices: string[], public initialValue?: string) {
   }
 }
