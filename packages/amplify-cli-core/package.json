@@ -26,7 +26,6 @@
   "dependencies": {
     "ajv": "^6.12.3",
     "dotenv": "^8.2.0",
-    "enquire": "0.0.2",
     "enquirer": "^2.3.6",
     "fs-extra": "^8.1.0",
     "hjson": "^3.2.1",
